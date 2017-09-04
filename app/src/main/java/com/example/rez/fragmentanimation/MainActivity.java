@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     public void GoToAClicked(View v)
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);       //Simple Transition choices: Fade, Open, Close
         transaction.replace(R.id.fragContainer, aFragment);
         transaction.commit();
     }
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     public void GoToBClicked(View v)
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);       //Simple Transition choices: Fade, Open, Close
         transaction.replace(R.id.fragContainer, bFragment);
         transaction.commit();
     }
