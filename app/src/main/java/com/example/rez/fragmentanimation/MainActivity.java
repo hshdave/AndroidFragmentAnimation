@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         bFragment = new BFragment();
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.fragContainer, aFragment);
+        transaction.add(R.id.fragContainer, aFragment); //First time, Empty Container, So Add.
         transaction.commit();
     }
 
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);       //Simple Transition choices: Fade, Open, Close
-        transaction.replace(R.id.fragContainer, aFragment);
+        transaction.replace(R.id.fragContainer, aFragment); //Notice, we need to replace now...
         transaction.commit();
     }
 
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.setCustomAnimations(R.animator.slide_left, R.animator.slide_right);
-                        //Creating 2 animatiosn using the Animator
+                        //Creating 2 animation using the Animator
                         //We change the property X of both.
                         //First will exit the Fragment A with a slide to Right
                         //Then it will enter the new Fragment with Slide Left
