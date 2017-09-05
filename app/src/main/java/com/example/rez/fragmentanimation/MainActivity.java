@@ -1,9 +1,13 @@
 package com.example.rez.fragmentanimation;
 
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.rez.fragmentanimation.Fragments.AFragment;
+import com.example.rez.fragmentanimation.Fragments.BFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,5 +45,11 @@ public class MainActivity extends AppCompatActivity {
                         //Then it will enter the new Fragment with Slide Left
         transaction.replace(R.id.fragContainer, bFragment);
         transaction.commit();
+    }
+
+    public void ChangeToSharedActivity(View v)
+    {
+        Intent intent = new Intent(this, SharedActivity.class);
+        startActivity(intent);
     }
 }

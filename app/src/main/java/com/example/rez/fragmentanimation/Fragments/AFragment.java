@@ -1,4 +1,4 @@
-package com.example.rez.fragmentanimation;
+package com.example.rez.fragmentanimation.Fragments;
 
 
 import android.os.Bundle;
@@ -7,14 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.rez.fragmentanimation.R;
+
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class BFragment extends Fragment {
+public class AFragment extends Fragment {
 
 
-    public BFragment() {
+    public AFragment() {
         // Required empty public constructor
     }
 
@@ -23,7 +25,7 @@ public class BFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_b, container, false);
+        return inflater.inflate(R.layout.fragment_a, container, false);
     }
 
 }
