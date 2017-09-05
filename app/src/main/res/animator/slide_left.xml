@@ -7,4 +7,11 @@
         android:valueTo="0"
         android:valueType="floatType"
         />
+
+    <!--
+        Properties that can be animated can be found here:
+            https://developer.android.com/guide/topics/graphics/prop-animation.html#views
+    -->
+
+
 </set>
