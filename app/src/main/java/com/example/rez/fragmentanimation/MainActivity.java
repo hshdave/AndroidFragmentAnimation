@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     public void GoToAClicked(View v)
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(R.animator.anim,R.animator.flip_out);
         transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);       //Simple Transition choices: Fade, Open, Close
         transaction.replace(R.id.fragContainer, aFragment); //Notice, we need to replace now...
         transaction.commit();
@@ -38,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
     public void GoToBClicked(View v)
     {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(R.animator.slide_left, R.animator.slide_right);
+
+
+        transaction.setCustomAnimations(R.animator.flip_right_in, R.animator.flip_out);
                         //Creating 2 animation using the Animator
                         //We change the property X of both.
                         //First will exit the Fragment A with a slide to Right

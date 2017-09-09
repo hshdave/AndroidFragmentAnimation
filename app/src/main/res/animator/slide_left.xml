@@ -5,8 +5,9 @@
         android:propertyName="x"
         android:valueFrom="1000"
         android:valueTo="0"
-        android:valueType="floatType"
-        />
+        android:valueType="floatType"/>
+
+
 
     <!--
         Properties that can be animated can be found here:
